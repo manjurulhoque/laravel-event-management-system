@@ -4,12 +4,13 @@
     <div class="row">
         <div class="col-sm-8 col-sm-push-2">
             <h1>Upcoming Events</h1>
+            <a href="{{ route('event-add') }}" class="btn btn-success">Add New Event</a>
 
             @foreach($upcomingEvents as $event)
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-heading">
-                            <a href="{{ route('event-view', $event->id) }}">{{ $event->title }}</a>
+                            <a href="{{ route('event-view', $event->slug) }}">{{ $event->title }}</a>
                         </h3>
                         <small>{{ $event->address }}</small>
                     </div>

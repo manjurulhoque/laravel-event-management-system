@@ -5,7 +5,7 @@
     </head>
     <body>
         @include('partials._nav')
-        <div class="container">
+        <div class="container" id="app">
             @include('partials._messages')
 
             @yield('content')

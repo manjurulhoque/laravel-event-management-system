@@ -2,6 +2,7 @@
 
 namespace App\Models\Event;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -10,6 +11,6 @@ class Event extends Model
 
     public function creator()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
